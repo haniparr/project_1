@@ -1,0 +1,25 @@
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /project_1/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /project_1/index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN Simply Static
+# Arahan (baris) antara "BEGIN Simply Static" dan "END Simply Static"
+# dihasilkan secara dinamis, dan hanya dapat dimodifikasi melalui filter WordPress.
+# Setiap perubahan pada arahan di antara penanda berikut akan ditimpa.
+<Files "C:\xampp\htdocs\project_1/wp-content/uploads\simply-static\1b75d77e4f51095066e798d3839e1f06-debug.txt">
+require all denied
+require host localhost
+</Files>
+# END Simply Static
